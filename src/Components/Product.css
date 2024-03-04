@@ -101,3 +101,6 @@
 .plus-minus img:hover{
   cursor: pointer;
 }
+.display{
+  cursor: pointer;
+}

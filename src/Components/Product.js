@@ -20,13 +20,14 @@ function Product() {
           <img
             src={onethumb}
             alt="imageonethumbnail"
+            className="display"
             style={{
               border: "3px solid #ff7d1b",
             }}
           />
-          <img src={twothumb} alt="imagetwothumbnail" />
-          <img src={threethumb} alt="imagethreethumbnail" />
-          <img src={fourthumb} alt="imagefourthumbnail" />
+          <img src={twothumb} alt="imagetwothumbnail" className="display" />
+          <img src={threethumb} alt="imagethreethumbnail" className="display" />
+          <img src={fourthumb} alt="imagefourthumbnail" className="display " />
         </div>
       </div>
       <div className="product-text">

@@ -14,6 +14,9 @@
   border-radius: 10px;
   margin-bottom: 20px;
 }
+.display-image:hover{
+  cursor: pointer;
+}
 .thumbnail img {
   width: 20%;
   border-radius: 5px;
@@ -103,4 +106,7 @@
 }
 .display{
   cursor: pointer;
+}
+.plus-minus span{
+  font-weight: 600;
 }

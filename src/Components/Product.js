@@ -13,9 +13,20 @@ import plus from "./images/icon-plus.svg";
 
 function Product() {
   const [selectedImage, setSelectedImage] = useState(one);
+  const [quantity, setQuantity] = useState(0);
 
   const handleThumbnailClick = (image) => {
     setSelectedImage(image);
+  };
+
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecrement = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    }
   };
 
   return (
@@ -79,9 +90,9 @@ function Product() {
           <span className="old-price">$250.00</span>
           <div className="action">
             <div className="plus-minus">
-              <img src={minus} alt="minus sign" />
-              <span>0</span>
-              <img src={plus} alt="plus sign" />
+              <img src={minus} alt="minus sign" onClick={handleDecrement} />
+              <span>{quantity}</span>
+              <img src={plus} alt="plus sign" onClick={handleIncrement} />
             </div>
             <div className="addcart">
               <span>Add to cart</span>

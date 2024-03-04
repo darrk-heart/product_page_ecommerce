@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Product.css";
 import one from "./images/image-product-1.jpg";
 import onethumb from "./images/image-product-1-thumbnail.jpg";
@@ -12,22 +12,53 @@ import minus from "./images/icon-minus.svg";
 import plus from "./images/icon-plus.svg";
 
 function Product() {
+  const [selectedImage, setSelectedImage] = useState(one);
+
+  const handleThumbnailClick = (image) => {
+    setSelectedImage(image);
+  };
+
   return (
     <div className="product">
       <div className="product-images">
-        <img src={one} alt="imageone" className="display-image" />
+        <img src={selectedImage} alt="selectedImage" className="display-image" />
         <div className="thumbnail">
           <img
             src={onethumb}
-            alt="imageonethumbnail"
+            alt="onethumbnail"
             className="display"
             style={{
-              border: "3px solid #ff7d1b",
+              border: selectedImage === one ? "3px solid #ff7d1b" : "none",
             }}
+            onClick={() => handleThumbnailClick(one)}
           />
-          <img src={twothumb} alt="imagetwothumbnail" className="display" />
-          <img src={threethumb} alt="imagethreethumbnail" className="display" />
-          <img src={fourthumb} alt="imagefourthumbnail" className="display " />
+          <img
+            src={twothumb}
+            alt="twothumb"
+            className="display"
+            style={{
+              border: selectedImage === two ? "3px solid #ff7d1b" : "none",
+            }}
+            onClick={() => handleThumbnailClick(two)}
+          />
+          <img
+            src={threethumb}
+            alt="threethumb"
+            className="display"
+            style={{
+              border: selectedImage === three ? "3px solid #ff7d1b" : "none",
+            }}
+            onClick={() => handleThumbnailClick(three)}
+          />
+          <img
+            src={fourthumb}
+            alt="fourthumb"
+            className="display"
+            style={{
+              border: selectedImage === four ? "3px solid #ff7d1b" : "none",
+            }}
+            onClick={() => handleThumbnailClick(four)}
+          />
         </div>
       </div>
       <div className="product-text">

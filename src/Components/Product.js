@@ -31,7 +31,7 @@ function Product() {
         </div>
       </div>
       <div className="product-text">
-        <div>
+        <div className="main-text">
           <h5>SNEAKER COMPANY</h5>
           <h1>Fall Limited Edition Sneakers</h1>
           <p>
@@ -40,7 +40,7 @@ function Product() {
             the weather can offer.
           </p>
         </div>
-        <div>
+        <div className="price-text">
           <h2>$125.00</h2>
           <span>50%</span>
           <span>$250.00</span>

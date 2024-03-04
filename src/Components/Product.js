@@ -8,7 +8,6 @@ import three from "./images/image-product-3.jpg";
 import threethumb from "./images/image-product-3-thumbnail.jpg";
 import four from "./images/image-product-4.jpg";
 import fourthumb from "./images/image-product-4-thumbnail.jpg";
-import cart from "./images/icon-cart.svg";
 import minus from "./images/icon-minus.svg";
 import plus from "./images/icon-plus.svg";
 
@@ -45,15 +44,14 @@ function Product() {
             <h2>$125.00</h2>
             <span>50%</span>
           </div>
-          <span>$250.00</span>
-          <div>
-            <div>
+          <span className="old-price">$250.00</span>
+          <div className="action">
+            <div className="plus-minus">
               <img src={minus} alt="minus sign" />
               <span>0</span>
               <img src={plus} alt="plus sign" />
             </div>
-            <div>
-              <img src={cart} alt="cart" />
+            <div className="addcart">
               <span>Add to cart</span>
             </div>
           </div>

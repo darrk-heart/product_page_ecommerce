@@ -7,7 +7,10 @@ import three from "./images/image-product-3.jpg";
 import threethumb from "./images/image-product-3-thumbnail.jpg";
 import four from "./images/image-product-4.jpg";
 import fourthumb from "./images/image-product-4-thumbnail.jpg";
-import "./Overlay.css"
+import "./Overlay.css";
+import nexticon from "./images/icon-next.svg";
+import previcon from "./images/icon-previous.svg";
+import closeicon from "./images/icon-close.svg";
 
 function Overlay() {
   const [selectedImage, setSelectedImage] = useState(one);
@@ -19,11 +22,15 @@ function Overlay() {
   return (
     <div className="overlay">
       <div className="product-images">
-        <img
-          src={selectedImage}
-          alt="selectedImage"
-          className="display-image"
-        />
+        <div className="prevnext">
+          <img src={previcon} alt="previous pictre" className="navigate" />
+          <img
+            src={selectedImage}
+            alt="selectedImage"
+            className="display-image"
+          />
+          <img src={nexticon} alt="next pictre" className="navigate" />
+        </div>
         <div className="thumbnail">
           <img
             src={onethumb}

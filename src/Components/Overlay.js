@@ -12,11 +12,10 @@ import nexticon from "./images/icon-next.svg";
 import previcon from "./images/icon-previous.svg";
 import closeicon from "./images/icon-close.svg";
 
-function Overlay() {
+function Overlay({ onClose }) {
   const images = [one, two, three, four];
   const thumbnails = [onethumb, twothumb, threethumb, fourthumb];
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [showOverlay, setShowOverlay] = useState(true);
 
   const handleThumbnailClick = (index) => {
     setSelectedImageIndex(index);
@@ -35,12 +34,8 @@ function Overlay() {
   };
 
   const handleCloseOverlay = () => {
-    setShowOverlay(false);
+    onClose();
   };
-
-  if (!showOverlay) {
-    return null;
-  }
 
   const selectedImage = images[selectedImageIndex];
 

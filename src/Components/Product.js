@@ -10,11 +10,19 @@ import four from "./images/image-product-4.jpg";
 import fourthumb from "./images/image-product-4-thumbnail.jpg";
 import minus from "./images/icon-minus.svg";
 import plus from "./images/icon-plus.svg";
+import Overlay from "./Overlay";
 
 function Product() {
   const [selectedImage, setSelectedImage] = useState(one);
   const [quantity, setQuantity] = useState(0);
+  const [showOverlay, setShowOverlay] = useState(false);
 
+  const handleImageClick = () => {
+    setShowOverlay(true);
+  };
+  const handleCloseOverlay = () => {
+    setShowOverlay(false);
+  };
   const handleThumbnailClick = (image) => {
     setSelectedImage(image);
   };
@@ -36,6 +44,7 @@ function Product() {
           src={selectedImage}
           alt="selectedImage"
           className="display-image"
+          onClick={handleImageClick}
         />
         <div className="thumbnail">
           <img
@@ -104,6 +113,7 @@ function Product() {
           </div>
         </div>
       </div>
+      {showOverlay && <Overlay onClose={handleCloseOverlay} />}
     </div>
   );
 }

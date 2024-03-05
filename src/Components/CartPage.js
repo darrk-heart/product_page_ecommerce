@@ -4,8 +4,8 @@ import "./CartPage.css";
 function CartPage() {
   return (
     <div className="cartpage">
-      <div>Cart</div>
-      <div>
+      <div className="cart-head">Cart</div>
+      <div className="cart-body">
         <span>Your cartpage is empty</span>
       </div>
     </div>

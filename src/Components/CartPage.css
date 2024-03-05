@@ -1,4 +1,31 @@
 .cartpage {
   position: absolute;
   z-index: 2;
+  top: 22%;
+  left: 82%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  width: 235px;
+  height: 170px;
+}
+.cart-head {
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: 100%;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #eeeeee;
+  padding-top: 5px;
+  padding-left: 15px;
+}
+.cart-body {
+  width: 100%;
+}
+.cart-body span {
+  display: flex;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #999999;
+  margin-top: 60px;
+  margin-left: 60px;
 }

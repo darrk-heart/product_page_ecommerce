@@ -9,7 +9,7 @@ function Heading() {
   const [showCartPage, setShowCartPage] = useState(false);
 
   const handleCartClick = () => {
-    setShowCartPage(true);
+    setShowCartPage(!showCartPage); 
   };
 
   return (
@@ -33,7 +33,7 @@ function Heading() {
         />
         <img src={rasta} alt="rastafara" className="avatar" />
       </div>
-      {showCartPage && <CartPage/>}
+      {showCartPage && <CartPage />}
     </div>
   );
 }

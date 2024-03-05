@@ -41,46 +41,48 @@ function Overlay({ onClose }) {
 
   return (
     <div className="overlay">
-      <img
-        src={closeicon}
-        alt="close icon"
-        className="close"
-        onClick={handleCloseOverlay}
-      />
-      <div className="overlay-images">
-        <div className="prevnext">
-          <img
-            src={previcon}
-            alt="previous pictre"
-            className="navigate"
-            onClick={handlePrevClick}
-          />
-          <img
-            src={selectedImage}
-            alt="selectedImage"
-            className="display-image overlay-image"
-          />
-          <img
-            src={nexticon}
-            alt="next pictre"
-            className="navigate"
-            onClick={handleNextClick}
-          />
-        </div>
-        <div className="thumbnail">
-          {thumbnails.map((thumbnail, index) => (
+      <div className="overlay-inner">
+        <img
+          src={closeicon}
+          alt="close icon"
+          className="close"
+          onClick={handleCloseOverlay}
+        />
+        <div className="overlay-images">
+          <div className="prevnext">
             <img
-              key={index}
-              src={thumbnail}
-              alt={`thumbnail-${index}`}
-              className="display"
-              style={{
-                border:
-                  index === selectedImageIndex ? "3px solid #ff7d1b" : "none",
-              }}
-              onClick={() => handleThumbnailClick(index)}
+              src={previcon}
+              alt="previous pictre"
+              className="navigate"
+              onClick={handlePrevClick}
             />
-          ))}
+            <img
+              src={selectedImage}
+              alt="selectedImage"
+              className="display-image overlay-image"
+            />
+            <img
+              src={nexticon}
+              alt="next pictre"
+              className="navigate"
+              onClick={handleNextClick}
+            />
+          </div>
+          <div className="thumbnail">
+            {thumbnails.map((thumbnail, index) => (
+              <img
+                key={index}
+                src={thumbnail}
+                alt={`thumbnail-${index}`}
+                className="display"
+                style={{
+                  border:
+                    index === selectedImageIndex ? "3px solid #ff7d1b" : "none",
+                }}
+                onClick={() => handleThumbnailClick(index)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

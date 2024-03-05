@@ -2,13 +2,17 @@ import "./App.css";
 import "./Components/Heading";
 import Heading from "./Components/Heading";
 import Product from "./Components/Product";
+import Overlay from "./Components/Overlay";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <Heading />
-        <Product />
+        {/* <div>
+          <Heading />
+          <Product />
+        </div> */}
+        <Overlay />
       </div>
     </div>
   );

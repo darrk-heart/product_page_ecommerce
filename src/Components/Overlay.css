@@ -1,0 +1,17 @@
+.overlay {
+  width: 20%;
+  display: flex;
+  position: absolute;
+  padding: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.product-images {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}

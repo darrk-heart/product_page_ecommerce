@@ -13,62 +13,79 @@ import previcon from "./images/icon-previous.svg";
 import closeicon from "./images/icon-close.svg";
 
 function Overlay() {
-  const [selectedImage, setSelectedImage] = useState(one);
+  const images = [one, two, three, four];
+  const thumbnails = [onethumb, twothumb, threethumb, fourthumb];
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [showOverlay, setShowOverlay] = useState(true);
 
-  const handleThumbnailClick = (image) => {
-    setSelectedImage(image);
+  const handleThumbnailClick = (index) => {
+    setSelectedImageIndex(index);
   };
+
+  const handleNextClick = () => {
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePrevClick = () => {
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleCloseOverlay = () => {
+    setShowOverlay(false);
+  };
+
+  if (!showOverlay) {
+    return null; 
+  }
+
+  const selectedImage = images[selectedImageIndex];
 
   return (
     <div className="overlay">
-      <img src={closeicon} alt="close icon" className="close" />
+      <img
+        src={closeicon}
+        alt="close icon"
+        className="close"
+        onClick={handleCloseOverlay}
+      />
       <div className="product-images">
         <div className="prevnext">
-          <img src={previcon} alt="previous pictre" className="navigate" />
+          <img
+            src={previcon}
+            alt="previous pictre"
+            className="navigate"
+            onClick={handlePrevClick}
+          />
           <img
             src={selectedImage}
             alt="selectedImage"
             className="display-image"
           />
-          <img src={nexticon} alt="next pictre" className="navigate" />
+          <img
+            src={nexticon}
+            alt="next pictre"
+            className="navigate"
+            onClick={handleNextClick}
+          />
         </div>
         <div className="thumbnail">
-          <img
-            src={onethumb}
-            alt="onethumbnail"
-            className="display"
-            style={{
-              border: selectedImage === one ? "3px solid #ff7d1b" : "none",
-            }}
-            onClick={() => handleThumbnailClick(one)}
-          />
-          <img
-            src={twothumb}
-            alt="twothumb"
-            className="display"
-            style={{
-              border: selectedImage === two ? "3px solid #ff7d1b" : "none",
-            }}
-            onClick={() => handleThumbnailClick(two)}
-          />
-          <img
-            src={threethumb}
-            alt="threethumb"
-            className="display"
-            style={{
-              border: selectedImage === three ? "3px solid #ff7d1b" : "none",
-            }}
-            onClick={() => handleThumbnailClick(three)}
-          />
-          <img
-            src={fourthumb}
-            alt="fourthumb"
-            className="display"
-            style={{
-              border: selectedImage === four ? "3px solid #ff7d1b" : "none",
-            }}
-            onClick={() => handleThumbnailClick(four)}
-          />
+          {thumbnails.map((thumbnail, index) => (
+            <img
+              key={index}
+              src={thumbnail}
+              alt={`thumbnail-${index}`}
+              className="display"
+              style={{
+                border:
+                  index === selectedImageIndex ? "3px solid #ff7d1b" : "none",
+              }}
+              onClick={() => handleThumbnailClick(index)}
+            />
+          ))}
         </div>
       </div>
     </div>

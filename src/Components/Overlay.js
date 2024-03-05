@@ -21,6 +21,7 @@ function Overlay() {
 
   return (
     <div className="overlay">
+      <img src={closeicon} alt="close icon" className="close" />
       <div className="product-images">
         <div className="prevnext">
           <img src={previcon} alt="previous pictre" className="navigate" />

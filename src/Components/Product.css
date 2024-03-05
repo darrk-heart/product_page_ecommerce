@@ -14,9 +14,6 @@
   border-radius: 10px;
   margin-bottom: 20px;
 }
-.display-image:hover{
-  cursor: pointer;
-}
 .thumbnail img {
   width: 20%;
   border-radius: 5px;
@@ -96,17 +93,17 @@
 .addcart span {
   margin-left: 50px;
 }
-.addcart:hover{
+.addcart:hover {
   background-color: #eeeeee;
-  color:#ff7d1b;
+  color: #ff7d1b;
   cursor: pointer;
 }
-.plus-minus img:hover{
+.plus-minus img:hover,
+.display-image:hover,
+.thumbnail img:hover {
   cursor: pointer;
 }
-.display{
-  cursor: pointer;
-}
-.plus-minus span{
+
+.plus-minus span {
   font-weight: 600;
 }

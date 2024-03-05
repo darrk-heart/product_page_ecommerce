@@ -2,7 +2,7 @@ import React from "react";
 import "./Heading.css";
 import logo from "./images/logo.svg";
 import cart from "./images/icon-cart.svg";
-import rasta from "./images/image-avatar.png";
+import rasta from "./images/image-avatar.jpg";
 
 function Heading() {
   return (

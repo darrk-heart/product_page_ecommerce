@@ -39,7 +39,7 @@ function Overlay() {
   };
 
   if (!showOverlay) {
-    return null; 
+    return null;
   }
 
   const selectedImage = images[selectedImageIndex];
@@ -52,7 +52,7 @@ function Overlay() {
         className="close"
         onClick={handleCloseOverlay}
       />
-      <div className="product-images">
+      <div className="overlay-images">
         <div className="prevnext">
           <img
             src={previcon}
@@ -63,7 +63,7 @@ function Overlay() {
           <img
             src={selectedImage}
             alt="selectedImage"
-            className="display-image"
+            className="display-image overlay-image"
           />
           <img
             src={nexticon}

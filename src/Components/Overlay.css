@@ -8,10 +8,10 @@
   transform: translate(-50%, -50%);
   z-index: 2;
 }
-.product-images {
-  width: 60%;
+.overlay-images {
+  width: 70%;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 58%;
   transform: translate(-50%, -50%);
 }
@@ -29,17 +29,20 @@
   z-index: 5;
   margin: -15px;
 }
+.close {
+  z-index: 5;
+  margin-top: -330px;
+  width: 20px;
+  height: 20px;
+  margin-left: 320px;
+  padding: 10px;
+  border-radius: 90%;
+}
+.overlay-image:hover {
+  cursor: auto;
+}
 .navigate:hover,
 .close:hover {
   cursor: pointer;
   background-color: #ff7d1b;
-}
-.close {
-  z-index: 5;
-  margin-top: -320px;
-  width: 20px;
-  height: 20px;
-  margin-left: 290px;
-  padding: 10px;
-  border-radius: 90%;
 }

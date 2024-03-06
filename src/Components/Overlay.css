@@ -42,6 +42,7 @@
   margin-left: 950px;
   padding: 10px;
   border-radius: 90%;
+  background-color: white;
 }
 .overlay-image:hover {
   cursor: auto;

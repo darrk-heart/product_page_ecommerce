@@ -107,9 +107,7 @@ function Product() {
               <span>{quantity}</span>
               <img src={plus} alt="plus sign" onClick={handleIncrement} />
             </div>
-            <div className="addcart">
-              <span>Add to cart</span>
-            </div>
+            <div className="addcart">Add to cart</div>
           </div>
         </div>
       </div>

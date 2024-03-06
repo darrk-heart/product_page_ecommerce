@@ -26,7 +26,7 @@ function Heading() {
       </div>
       <div className="second-head">
         <div>
-          <span className="cart-count">2</span>
+          <span className="cart-count">3</span>
           <img
             src={cart}
             alt="cart icon"

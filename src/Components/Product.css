@@ -87,17 +87,11 @@
   border-radius: 10px;
   color: white;
   font-size: 0.8rem;
-  display: flex;
   font-weight: 600;
+  text-align: center;
 }
-.addcart span {
-  margin-left: 45px;
-}
-.addcart:hover {
-  background-color: #eeeeee;
-  color: #ff7d1b;
-  cursor: pointer;
-}
+
+.addcart:hover,
 .plus-minus img:hover,
 .display-image:hover,
 .thumbnail img:hover {

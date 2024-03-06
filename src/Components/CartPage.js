@@ -21,7 +21,7 @@ function CartPage() {
               </div>
             </div>
           </div>
-          <img src={bin} alt="delete" />
+          <img src={bin} alt="delete" className="delete" />
         </div>
         <div className="checkout">Checkout</div>
       </div>

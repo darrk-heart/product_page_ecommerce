@@ -79,6 +79,7 @@
   justify-content: space-between;
   padding: 10px;
   border-radius: 10px;
+  font-weight: 600;
 }
 .addcart {
   background-color: #ff7d1b;
@@ -90,14 +91,9 @@
   font-weight: 600;
   text-align: center;
 }
-
 .addcart:hover,
 .plus-minus img:hover,
 .display-image:hover,
 .thumbnail img:hover {
   cursor: pointer;
-}
-
-.plus-minus span {
-  font-weight: 600;
 }

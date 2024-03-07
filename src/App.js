@@ -1,4 +1,3 @@
-// App.js
 import React from "react";
 import "./App.css";
 import Heading from "./Components/Heading";
@@ -11,7 +10,7 @@ function App() {
   const updateTotalQuantity = (quantity) => {
     console.log("Updating total quantity:", quantity);
   };
-  
+
   return (
     <div className="App">
       <div className="container">

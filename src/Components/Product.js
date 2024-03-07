@@ -12,7 +12,7 @@ import minus from "./images/icon-minus.svg";
 import plus from "./images/icon-plus.svg";
 import Overlay from "./Overlay";
 
-function Product() {
+function Product({addToCart}) {
   const [selectedImage, setSelectedImage] = useState(one);
   const [quantity, setQuantity] = useState(0);
   const [showOverlay, setShowOverlay] = useState(false);
@@ -35,6 +35,11 @@ function Product() {
     if (quantity > 0) {
       setQuantity(quantity - 1);
     }
+  };
+
+  const handleAddtoCart = () => {
+    addToCart({ selectedImage, quantity });
+    setQuantity(0);
   };
 
   return (
@@ -107,7 +112,9 @@ function Product() {
               <span>{quantity}</span>
               <img src={plus} alt="plus sign" onClick={handleIncrement} />
             </div>
-            <div className="addcart">Add to cart</div>
+            <div className="addcart" onClick={handleAddtoCart}>
+              Add to cart
+            </div>
           </div>
         </div>
       </div>

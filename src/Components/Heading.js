@@ -1,4 +1,3 @@
-// Heading.js
 import React, { useState } from "react";
 import "./Heading.css";
 import logo from "./images/logo.svg";
@@ -8,16 +7,14 @@ import CartPage from "./CartPage";
 
 function Heading({ updateCartCount }) {
   const [showCartPage, setShowCartPage] = useState(false);
-  const [cartQuantity, setCartQuantity] = useState(0); // State to keep track of total quantity in cart
+  const [cartQuantity, setCartQuantity] = useState(0);
 
   const handleCartClick = () => {
     setShowCartPage(!showCartPage);
   };
 
-  // Function to update total quantity in cart
   const updateTotalQuantity = (quantity) => {
     setCartQuantity(quantity);
-    // Call updateCartCount prop with updated cart quantity
     updateCartCount(quantity);
   };
 
@@ -35,7 +32,6 @@ function Heading({ updateCartCount }) {
       </div>
       <div className="second-head">
         <div>
-          {/* Display total quantity in cart */}
           <span className="cart-count">{cartQuantity}</span>
           <img
             src={cart}

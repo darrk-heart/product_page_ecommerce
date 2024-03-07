@@ -14,7 +14,7 @@ I'mma keep you in touch right
 
 ## UI
 
-i'll not forget to add it
+![image](./final/Capture.PNG)
 
 ## License
 

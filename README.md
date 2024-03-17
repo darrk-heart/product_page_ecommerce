@@ -14,7 +14,7 @@ I'mma keep you in touch right
 
 ## UI
 
-![image](./final/Capture.PNG)
+![image](./src/final/Capture.PNG)
 
 ## License
 
@@ -22,4 +22,8 @@ This project is as every project licensed under [MIT](./LICENSE).
 
 ## Contributions
 
-Any ideas are soo welcome
+Just send a PR for fixes and improvements.
+
+## Known Issues
+
+- I have been facing issues trying to fix the add to cart button such that when you click on it the amount of items added to the cart updates at the top there.

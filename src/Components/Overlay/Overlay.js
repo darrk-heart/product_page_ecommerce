@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import one from "./images/image-product-1.jpg";
-import onethumb from "./images/image-product-1-thumbnail.jpg";
-import two from "./images/image-product-2.jpg";
-import twothumb from "./images/image-product-2-thumbnail.jpg";
-import three from "./images/image-product-3.jpg";
-import threethumb from "./images/image-product-3-thumbnail.jpg";
-import four from "./images/image-product-4.jpg";
-import fourthumb from "./images/image-product-4-thumbnail.jpg";
+import one from "../../images/image-product-1.jpg";
+import onethumb from "../../images/image-product-1-thumbnail.jpg";
+import two from "../../images/image-product-2.jpg";
+import twothumb from "../../images/image-product-2-thumbnail.jpg";
+import three from "../../images/image-product-3.jpg";
+import threethumb from "../../images/image-product-3-thumbnail.jpg";
+import four from "../../images/image-product-4.jpg";
+import fourthumb from "../../images/image-product-4-thumbnail.jpg";
 import "./Overlay.css";
-import nexticon from "./images/icon-next.svg";
-import previcon from "./images/icon-previous.svg";
-import closeicon from "./images/icon-close.svg";
+import nexticon from "../../images/icon-next.svg";
+import previcon from "../../images/icon-previous.svg";
+import closeicon from "../../images/icon-close.svg";
 
 function Overlay({ onClose }) {
   const images = [one, two, three, four];

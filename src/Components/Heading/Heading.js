@@ -1,21 +1,15 @@
 import React, { useState } from "react";
 import "./Heading.css";
-import logo from "./images/logo.svg";
-import cart from "./images/icon-cart.svg";
-import rasta from "./images/image-avatar.jpg";
+import logo from "../../images/logo.svg";
+import cart from "../../images/icon-cart.svg";
+import rasta from "../../images/image-avatar.jpg";
 import CartPage from "../CartPage/CartPage";
 
-function Heading({ updateCartCount }) {
+function Heading() {
   const [showCartPage, setShowCartPage] = useState(false);
-  const [cartQuantity, setCartQuantity] = useState(0);
 
   const handleCartClick = () => {
     setShowCartPage(!showCartPage);
-  };
-
-  const updateTotalQuantity = (quantity) => {
-    setCartQuantity(quantity);
-    updateCartCount(quantity);
   };
 
   return (
@@ -32,7 +26,7 @@ function Heading({ updateCartCount }) {
       </div>
       <div className="second-head">
         <div>
-          <span className="cart-count">{cartQuantity}</span>
+          <span className="cart-count">3</span>
           <img
             src={cart}
             alt="cart icon"

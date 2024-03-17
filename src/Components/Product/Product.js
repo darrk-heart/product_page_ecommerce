@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import "./Product.css";
-import one from "./images/image-product-1.jpg";
-import onethumb from "./images/image-product-1-thumbnail.jpg";
-import two from "./images/image-product-2.jpg";
-import twothumb from "./images/image-product-2-thumbnail.jpg";
-import three from "./images/image-product-3.jpg";
-import threethumb from "./images/image-product-3-thumbnail.jpg";
-import four from "./images/image-product-4.jpg";
-import fourthumb from "./images/image-product-4-thumbnail.jpg";
-import minus from "./images/icon-minus.svg";
-import plus from "./images/icon-plus.svg";
-import Overlay from "./Overlay";
+import one from "../../images/image-product-1.jpg";
+import onethumb from "../../images/image-product-1-thumbnail.jpg";
+import two from "../../images/image-product-2.jpg";
+import twothumb from "../../images/image-product-2-thumbnail.jpg";
+import three from "../../images/image-product-3.jpg";
+import threethumb from "../../images/image-product-3-thumbnail.jpg";
+import four from "../../images/image-product-4.jpg";
+import fourthumb from "../../images/image-product-4-thumbnail.jpg";
+import minus from "../../images/icon-minus.svg";
+import plus from "../../images/icon-plus.svg";
+import Overlay from "../Overlay/Overlay";
 
 function Product({addToCart}) {
   const [selectedImage, setSelectedImage] = useState(one);

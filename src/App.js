@@ -1,7 +1,6 @@
 import "./App.css";
-import "./Components/Heading";
-import Heading from "./Components/Heading";
-import Product from "./Components/Product";
+import Heading from "./Components/Heading/Heading";
+import Product from "./Components/Product/Product";
 
 function App() {
   return (

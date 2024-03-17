@@ -1,7 +1,7 @@
 import React from "react";
 import "./CartPage.css";
-import bin from "./images/icon-delete.svg";
-import one from "./images/image-product-1.jpg";
+import bin from "../../images/icon-delete.svg";
+import one from "../../images/image-product-1.jpg";
 
 function CartPage() {
   return (

@@ -2,11 +2,7 @@
 
 ## About the Project
 
-another project to develop more skills on my frontend journey
-
-## My Personal Experience About This Project
-
-I'mma keep you in touch right
+Just one of those projects to enhance my skills on the frontend journey
 
 ## Technologies Used
 
